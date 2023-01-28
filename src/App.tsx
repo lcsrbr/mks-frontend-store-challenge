@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { checkout as checkoutRedux } from './redux/reducer/products';
+
 function App() {
 
   const [teste, setTeste] = useState([]) as any
+  const dispatch = useDispatch();
 
   async function API() {
     const URL = await "https://mks-challenge-api-frontend.herokuapp.com/api/v1/products?page=1&rows=50&sortBy=id&orderBy=ASC"
@@ -30,6 +34,7 @@ function App() {
               <p>{product.description}</p>
               <p>{product.price}</p>
               <img src={product.img} alt={product.name} />
+              <button onClick={() => dispatch(checkoutRedux(product))}>Comprar</button>
             </div>
           )
         })}
