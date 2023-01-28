@@ -2,21 +2,21 @@ import { createSlice } from '@reduxjs/toolkit';
 // import IProducts from '../../interfaces/iproducts'
 
 const slice = createSlice({
-  name: 'checkout',
+  name: 'api',
   initialState: {
-    checkout: [],
+    api: [],
   },
 
 
   reducers: {
-    checkout(_state, checkout) : any{ 
+    api(_state, api) : any{ 
       return {
-        checkout: checkout.payload,
+        api:api.payload,
       };
     },
   },
 });
 
-export const { checkout } = slice.actions;
+export const { api } = slice.actions;
 
 export default slice.reducer;
