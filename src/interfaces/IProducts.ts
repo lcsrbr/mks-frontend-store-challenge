@@ -7,6 +7,7 @@ export default interface IProducts {
     price:string,
     createdAt:string,
     updatedAt:string
+    cartCode: string,
 }
 
 // id(pin):4

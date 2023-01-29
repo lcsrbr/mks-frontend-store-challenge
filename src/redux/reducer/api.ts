@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import IProducts from '../../interfaces/IProducts';
 // import IProducts from '../../interfaces/iproducts'
 
 const slice = createSlice({
@@ -9,7 +10,7 @@ const slice = createSlice({
 
 
   reducers: {
-    api(_state, api) : any{ 
+    api(_state, api) : IProducts[]{ 
       return {
         api:api.payload,
       };
