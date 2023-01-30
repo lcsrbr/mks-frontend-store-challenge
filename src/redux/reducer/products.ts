@@ -1,16 +1,15 @@
-import { createSlice } from '@reduxjs/toolkit';
-import IProducts from '../../interfaces/IProducts';
-// import IProducts from '../../interfaces/iproducts'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import ICheckout from '../../interfaces/ICheckout';
 
 const slice = createSlice({
   name: 'checkout',
   initialState: {
-    checkout: [],
+    checkout: [] as ICheckout[],
   },
 
 
   reducers: {
-    checkout(_state, checkout) : IProducts{ 
+    checkout(_state, checkout: PayloadAction<ICheckout[]>) { 
       return {
         checkout: checkout.payload,
       };

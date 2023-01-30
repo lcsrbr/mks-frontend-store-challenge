@@ -4,10 +4,11 @@ import { api as apiRedux } from '../redux/reducer/api';
 import ProductCard from '../components/ProductCard';
 import API from '../services/api';
 import IProducts from '../interfaces/IProducts';
+import { RootState } from '../redux/store';
 function Home() {
 
   const dispatch = useDispatch();
-  const apiProducts = useSelector(({ api }) => api.api)
+  const apiProducts = useSelector(({ api }: RootState) => api.api)
 
 const getApi = async () => {
   const products = await API();

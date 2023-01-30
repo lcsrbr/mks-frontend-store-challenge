@@ -1,17 +1,18 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import IProducts from "../interfaces/IProducts";
+import IPropCheckout from "../interfaces/IPropCheckout";
 import { checkout as checkoutRedux } from "../redux/reducer/products";
+import { RootState } from "../redux/store";
 
-function CheckoutCard({product}) {
+function CheckoutCard({product}: IPropCheckout) {
   const dispatch = useDispatch();
   const checkoutProducts = useSelector(
-    ({ products }) => products.checkout
+    ({ products }: RootState) => products.checkout
   );
 
   const removeFromCart = (id: string) => {
     const removed = checkoutProducts.filter(
-      (product: IProducts) => product.cartCode !== id
+      (product) => product.cartCode !== id
     );
     dispatch(checkoutRedux(removed));
   };
@@ -30,7 +31,7 @@ function CheckoutCard({product}) {
       <p>
         {product.price}
       </p>
-      <img src={product.img} alt={product.name} />
+      <img src={product.photo} alt={product.name} />
       <button onClick={() => removeFromCart(product.cartCode)}>Remover</button>
     </div>
   );

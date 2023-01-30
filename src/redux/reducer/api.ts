@@ -1,16 +1,15 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import IProducts from '../../interfaces/IProducts';
-// import IProducts from '../../interfaces/iproducts'
 
 const slice = createSlice({
   name: 'api',
   initialState: {
-    api: [],
+    api: [] as IProducts[],
   },
 
 
   reducers: {
-    api(_state, api) : IProducts[]{ 
+    api(_state, api:PayloadAction<IProducts[]>){ 
       return {
         api:api.payload,
       };
