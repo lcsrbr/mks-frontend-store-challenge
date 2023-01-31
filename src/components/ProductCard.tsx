@@ -11,6 +11,7 @@ const CardContainer = styled.div`
   padding: 0px 12px 0px 12px;
   display: flex;
   flex-direction: column;
+  gap: 10px;
   // justify-content: space-between;
   align-items: center;
   background: #ffffff;
@@ -64,7 +65,7 @@ h3 {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  height: 38px;
+  // height: 38px;
   width: 124px;
 }
 `

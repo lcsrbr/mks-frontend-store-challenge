@@ -1,23 +1,70 @@
-import React,  {useState, useEffect} from 'react'
-import { useSelector } from 'react-redux'
-import { RootState } from '../redux/store';
+import React from "react";
+import { useSelector } from "react-redux";
+import styled from "styled-components";
+import { RootState } from "../redux/store";
+import cartIcon from "../images/cartIcon.svg";
+
+const HeaderComponent = styled.header`
+  display: flex;
+  top: 0;
+  justify-content: space-between;
+  height: 101px;
+  align-items: center;
+  padding: 0px 65px 0px 65px;
+  background: #0f52ba;
+`;
+const HeaderTitle = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: baseline;
+  color: #ffffff;
+  font-family: 'Montserrat';
+  font-style: normal;
+
+  h1 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 19px;
+  }
+  p {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 19px;
+  }
+`;
+const CartButton = styled.button`
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+border: none;
+width: 90px;
+height: 45px;
+left: 1262px;
+top: 29px;
+background: #FFFFFF;
+border-radius: 8px;`;
 
 function Header() {
-    const [total, setTotal] = useState('0.00')
-    const checkoutProducts = useSelector(({ products }: RootState) => products.checkout)
-
-    const getTotal = () => {
-        const result = checkoutProducts.reduce((total, product) => total + Number(product.price), 0)
-        setTotal(result.toFixed(2))
-    }
-
-    useEffect(() => {
-        getTotal()
-    },[])
+  const checkoutProducts = useSelector(
+    ({ products }: RootState) => products.checkout
+  );
 
   return (
-    <div>{total}</div>
-  )
+    <HeaderComponent>
+      <HeaderTitle>
+        <h1>MKS</h1>
+        <p>Sistemas</p>
+      </HeaderTitle>
+      <CartButton>
+        <img src={cartIcon} alt="cartIcon" />
+        <p>
+          {checkoutProducts.length}
+        </p>
+      </CartButton>
+    </HeaderComponent>
+  );
 }
 
-export default Header
+export default Header;

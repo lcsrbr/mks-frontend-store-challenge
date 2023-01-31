@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import Cart from './pages/Cart';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import "./resetStyles.css"
 function App() {
 
   return (
