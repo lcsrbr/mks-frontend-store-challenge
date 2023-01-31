@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import CheckoutCard from '../components/CheckoutCard';
+import styled from 'styled-components';
 import ICheckout from '../interfaces/ICheckout';
 import { RootState } from '../redux/store';
 

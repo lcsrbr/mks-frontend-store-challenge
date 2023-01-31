@@ -1,8 +1,14 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import styled from "styled-components";
 import IPropCheckout from "../interfaces/IPropCheckout";
 import { checkout as checkoutRedux } from "../redux/reducer/products";
 import { RootState } from "../redux/store";
+
+const Container = styled.div`
+  display: flex;
+  background-color: red;
+  `
 
 function CheckoutCard({product}: IPropCheckout) {
   const dispatch = useDispatch();

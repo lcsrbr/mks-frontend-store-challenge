@@ -13,7 +13,7 @@ function Header() {
 
     useEffect(() => {
         getTotal()
-    })
+    },[])
 
   return (
     <div>{total}</div>
