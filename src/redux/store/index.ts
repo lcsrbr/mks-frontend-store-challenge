@@ -7,7 +7,7 @@ const store = configureStore({
   reducer: {
     products,
     api,
-    cart
+    cart,
   },
 });
 

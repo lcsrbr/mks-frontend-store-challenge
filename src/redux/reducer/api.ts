@@ -7,11 +7,10 @@ const slice = createSlice({
     api: [] as IProducts[],
   },
 
-
   reducers: {
-    api(_state, api:PayloadAction<IProducts[]>){ 
+    api(_state, api: PayloadAction<IProducts[]>) {
       return {
-        api:api.payload,
+        api: api.payload,
       };
     },
   },

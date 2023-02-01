@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import IProducts from '../../interfaces/IProducts'
+import IProducts from '../../interfaces/IProducts';
 
 const slice = createSlice({
   name: 'checkout',
@@ -7,15 +7,14 @@ const slice = createSlice({
     checkout: [] as IProducts[],
   },
 
-
   reducers: {
-    checkout(_state, checkout: PayloadAction<IProducts[]>) { 
+    checkout(_state, checkout: PayloadAction<IProducts[]>) {
       const organizedState = [...checkout.payload];
       organizedState.sort((a, b) => {
-        return a.id - b.id
-    })
+        return a.id - b.id;
+      });
       return {
-        checkout: organizedState
+        checkout: organizedState,
       };
     },
   },

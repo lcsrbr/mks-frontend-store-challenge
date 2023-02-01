@@ -6,11 +6,10 @@ const slice = createSlice({
     cart: false as boolean,
   },
 
-
   reducers: {
-    cart(_state, cart:PayloadAction<boolean>){ 
+    cart(_state, cart: PayloadAction<boolean>) {
       return {
-        cart:cart.payload,
+        cart: cart.payload,
       };
     },
   },
