@@ -4,7 +4,7 @@ import * as S from './styles';
 function Footer() {
   return (
     <S.FooterDiv>
-      <p>MKS sistemas © Todos os direitos reservados</p>
+      <p role="footer">MKS sistemas © Todos os direitos reservados</p>
     </S.FooterDiv>
   );
 }

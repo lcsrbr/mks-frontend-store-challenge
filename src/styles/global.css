@@ -1,12 +1,10 @@
-import { createGlobalStyle } from 'styled-components';
-
-export const GlobalStyle = createGlobalStyle`
 * { 
     margin: 0; 
     padding: 0;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     font-family: 'Montserrat', sans-serif;
+    transition: .5s;
 }
 
 main {
@@ -15,4 +13,3 @@ main {
     display: flex;
     flex-direction: column;
 }
-`;

@@ -13,14 +13,17 @@ function Header() {
   const dispatch = useDispatch();
 
   return (
-    <S.HeaderComponent>
-      <S.HeaderTitle>
+    <S.HeaderComponent role="header">
+      <S.HeaderTitle role="h1HeaderTitle">
         <h1>MKS</h1>
         <p>Sistemas</p>
       </S.HeaderTitle>
-      <S.CartButton onClick={() => dispatch(cartReducer(!cartRedux))}>
+      <S.CartButton
+        onClick={() => dispatch(cartReducer(!cartRedux))}
+        role="buttonHeader"
+      >
         <img src={cartIcon} alt="cartIcon" />
-        <p>
+        <p role="productsQty">
           {checkoutProducts.reduce(
             (products, product) => products + 1 * product.quantity,
             0,

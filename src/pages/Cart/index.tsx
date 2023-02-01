@@ -31,7 +31,10 @@ function Cart() {
     <S.CartContainer open={cartRedux}>
       <S.CartHeader>
         <p>Carrinho de compras</p>
-        <button onClick={() => dispatch(cartReducer(!cartRedux))}>
+        <button
+          onClick={() => dispatch(cartReducer(!cartRedux))}
+          role="closeCart"
+        >
           <img src={closeCart} alt="close button" />
         </button>
       </S.CartHeader>
@@ -46,7 +49,7 @@ function Cart() {
       <S.CartFooter>
         <S.Total>
           <p>Total:</p>
-          <p>{`R$${(+total).toLocaleString('pt-BR')}`}</p>
+          <p role="totalCart">{`R$${(+total).toLocaleString('pt-BR')}`}</p>
         </S.Total>
         <button>Finalizar Compra</button>
       </S.CartFooter>

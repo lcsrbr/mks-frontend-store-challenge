@@ -39,7 +39,7 @@ function ProductCart({ product }: IPropProducts) {
         </S.TitleAndPrice>
         <p>{product.description}</p>
       </S.CardContainer>
-      <S.Comprar onClick={() => getCart(product)}>
+      <S.Comprar onClick={() => getCart(product)} role="comprarButton">
         <img src={bagIcon} alt="bag icon" />
         COMPRAR
       </S.Comprar>

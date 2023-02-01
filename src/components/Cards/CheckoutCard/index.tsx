@@ -54,26 +54,40 @@ function CheckoutCard({ product }: IProductsProps) {
   };
 
   return (
-    <S.Container>
+    <S.Container role="cartCard">
       <img src={product.photo} alt={product.name} />
       <h3>{`${product.brand} ${product.name}`}</h3>
       <S.Qtd>
         <p>Qtd:</p>
         <div>
-          <button type="button" onClick={() => changeProduct('-', product.id)}>
+          <button
+            type="button"
+            onClick={() => changeProduct('-', product.id)}
+            role="rmButton"
+          >
             -
           </button>
           <input
+            role="inputProduct"
             value={getQuantity(product.id)}
             onChange={e => changeProduct(e.target.value, product.id)}
           />
-          <button type="button" onClick={() => changeProduct('+', product.id)}>
+          <button
+            type="button"
+            onClick={() => changeProduct('+', product.id)}
+            role="addButton"
+          >
             +
           </button>
         </div>
       </S.Qtd>
-      <p>{`R$${Math.trunc(+product.price).toLocaleString('pt-BR')}`}</p>
-      <S.CloseButton onClick={() => changeProduct('0', product.id)}>
+      <p role="productTotalPrice">
+        {`R$${Math.trunc(+product.price).toLocaleString('pt-BR')}`}
+      </p>
+      <S.CloseButton
+        onClick={() => changeProduct('0', product.id)}
+        role="removeItem"
+      >
         <img src={closeCart} alt="close button" />
       </S.CloseButton>
     </S.Container>
