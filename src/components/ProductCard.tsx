@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import IProducts from "../interfaces/IProducts";
-import IPropProducts from "../interfaces/IPropProducts";
+import IPropProducts from "../interfaces/IProductsProps";
 import { checkout as checkoutRedux } from "../redux/reducer/products";
 import { RootState } from "../redux/store";
 import bagIcon from "../images/bagIcon.svg"
@@ -99,8 +99,15 @@ function ProductCart({ product }: IPropProducts) {
   );
 
   const getCart = (product: IProducts) => {
-    const cartCode = Math.random().toString(16).substr(2);
-    dispatch(checkoutRedux([...checkoutProducts, { ...product, cartCode }]));
+    const filter = checkoutProducts.filter((item) => item.id !== product.id);
+    const newCart: IProducts | undefined = checkoutProducts.find((item) => item.id === product.id);
+    if (newCart) {
+      const setQuantity = {
+        ...newCart,
+        quantity: newCart.quantity + 1,
+      };
+      dispatch(checkoutRedux([...filter, setQuantity]));
+    }
   };
 
   return (

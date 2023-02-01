@@ -1,7 +1,9 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
 import { RootState } from "../redux/store";
+import { cart as cartReducer } from "../redux/reducer/cart";
+
 import cartIcon from "../images/cartIcon.svg";
 
 const HeaderComponent = styled.header`
@@ -35,6 +37,7 @@ const HeaderTitle = styled.div`
 `;
 const CartButton = styled.button`
 display: flex;
+cursor: pointer;
 align-items: center;
 justify-content: center;
 gap: 10px;
@@ -50,6 +53,12 @@ function Header() {
   const checkoutProducts = useSelector(
     ({ products }: RootState) => products.checkout
   );
+  const cartRedux = useSelector(
+    ({ cart }: RootState) => cart.cart
+  );
+
+  const dispatch = useDispatch();
+
 
   return (
     <HeaderComponent>
@@ -57,10 +66,11 @@ function Header() {
         <h1>MKS</h1>
         <p>Sistemas</p>
       </HeaderTitle>
-      <CartButton>
+      <CartButton onClick={() => dispatch(cartReducer(!cartRedux))}>
         <img src={cartIcon} alt="cartIcon" />
         <p>
-          {checkoutProducts.length}
+        {/* {checkoutProducts.reduce((products, {quantity}) => products + Number(quantity)), 0)} */}
+          {checkoutProducts.reduce((products, product) => products + (1 * product.quantity), 0)}
         </p>
       </CartButton>
     </HeaderComponent>

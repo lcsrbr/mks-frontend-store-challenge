@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { api as apiRedux } from '../redux/reducer/api';
+import { checkout as checkoutRedux } from '../redux/reducer/products';
+
 import ProductCard from '../components/ProductCard';
 import API from '../services/api';
 import IProducts from '../interfaces/IProducts';
@@ -21,6 +23,7 @@ const Main = styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
+// height: 100%;
 `;
 
 
@@ -31,12 +34,20 @@ function Home() {
 
 const getApi = async () => {
   const products = await API();
-  dispatch(apiRedux(products))
+  const result = products.map((product) => {
+    return {
+      ...product,
+      quantity: 0,
+    }
+  })
+  dispatch(apiRedux(result))
+  dispatch(checkoutRedux(result))
+
 }
 
   useEffect(() => {
     getApi()    
-  })
+  }, [])
 
   return ( 
     <Main>

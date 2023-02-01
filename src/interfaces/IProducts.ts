@@ -6,5 +6,6 @@ export default interface IProducts {
     photo:string
     price:string,
     createdAt:string,
-    updatedAt:string
+    updatedAt:string,
+    quantity: number,
 }
