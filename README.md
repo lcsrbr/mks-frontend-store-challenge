@@ -1,43 +1,38 @@
-Diretrizes do desafio
+MKS Front End Store Challenge
+===========================
+Projeto realizado para o processo seletivo de Desenvolvedor Front End da MKS Desenvolvimento de Sistemas.
+
+# [Acesse o projeto por aqui!](https://mks-frontend-store-challenge.vercel.app/)
+
+Sobre o projeto
+===========================
+O projeto consiste em uma página Front End feita com TypeScript e React, com exibição dos produtos, funcionalidades de carrinho, adição, subtração e remoção dos produtos. A aplicação consome a [API REST de produtos da MKS](https://mks-challenge-api-frontend.herokuapp.com/api-docs/);
+
+Tecnologias Utilizadas
 ===========================
 
-O objetivo principal desse teste é avaliar sua capacidade de escrever código limpo, bem testado e reutilizável. Ao terminar, faça o deploy da aplicação e mande-nos o link.
+- Projeto escrito em <b>React</b> com <b>TypeScript</b>;
 
-Tarefa (funcional)
----------------
+- Todo estado é gerenciado via <b>Redux-Tookit</b>;
 
-Para esse desafio, você deve consumir nossa [API REST de produtos](https://mks-challenge-api-frontend.herokuapp.com/api-docs/) para exibir a lista de produtos da loja.
+- Estilização feita com <b>Styled Components</b>;
 
-A aplicação deve conter apenas uma página/rota e um carrinho.
+- Cobertura de Testes Unitários com <b>JEST e Testing-Library</b>;
 
-- <b>Loja</b>: A lista de produtos deve ser buscada de nossa API, use um shimmer/skeleton enquanto estiver em loading.
- 
-- <b>Carrinho</b>: O carrinho deve conter todos os produtos selecionados, juntamente com a opção de aumentar a quantidade de cada produto selecionado.
 
-Use do Jest e a testing-library para realizar os testes unitários.
+# Orientações
 
-Recursos
----------------
 
-UI/UX: [Figma loja](https://www.figma.com/file/Z4z8osDbK1ET7cjNzFRMrK/MKS-Front-end-challenge?node-id=0%3A1) PS: O design system está incluso, incluindo a fonte.
+  <summary><strong>‼️ Para acessar o projeto: </strong></summary><br />
 
-API: [API REST de produtos](https://mks-challenge-api-frontend.herokuapp.com/api-docs/) para exibir a lista de produtos da loja.
+  1. Clone o repositório
 
-Ferramentas requeridas
----------------
+  - Use o comando: `git clone git@github.com:lcsrbr/TrybeTunes.git`.
 
-1. TypeScript
-2. React ou Next.js (Preferimos Next.js)
-3. Redux toolkit
-4. Styled-components
-5. Jest
+  2. Instale as dependências
 
-Aspectos técnicos
----------------
-
-Todas as ferramentas listadas anteriormente são mandatórias, além delas sinta-se livre para utilizar de qualquer outra technologia que te seja confortável.
-
-Faça o deploy!
----------------
-
-Ao finalizar, faça o deploy no lugar que te for confortável (exemplo: Vercel, Netlify, Heroku, Amazon EC2, etc)
+  - `npm install`.
+  
+  # [Outros Projetos](https://portfolio-bay-omega-17.vercel.app/#projetos)
+<img src='https://portfolio-bay-omega-17.vercel.app/static/media/trybetunes.cf63ca0e7637c522fd5c.png'></img>
+<img src='https://portfolio-bay-omega-17.vercel.app/static/media/trybetunes.cf63ca0e7637c522fd5c.png'></img>
