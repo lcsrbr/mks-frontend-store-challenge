@@ -20,7 +20,10 @@ flex-direction: column;
 align-items: center;
 overflow-y: auto;
 padding-top: 10px;
-height: 56vh;
+@media (max-height: 800px) {
+  height: 56vh;
+}
+  height: 70vh ;
 gap: 22px;
 border: 2px solid transparent; /* <- here */
 transition: border 1s;
@@ -101,4 +104,5 @@ justify-content: space-around;
 align-items: center;
 width: 100%;
 height: 97px;
+background: #0f52ba;
 `

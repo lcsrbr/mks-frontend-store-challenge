@@ -45,7 +45,7 @@ function Cart() {
       <S.CartFooter>
         <S.Total>
           <p>Total:</p>
-          <p>{`R$${total}`}</p>
+          <p>{`R$${(+total).toLocaleString('pt-BR')}`}</p>
         </S.Total>
         <button>Finalizar Compra</button>
       </S.CartFooter>

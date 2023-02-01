@@ -77,7 +77,7 @@ function CheckoutCard({ product }: IProductsProps) {
           </div>
         </S.Qtd>
         <p>
-          {`R$${Math.trunc(+product.price)}`}
+          {`R$${Math.trunc(+product.price).toLocaleString('pt-BR')}`}
         </p>
         <S.CloseButton onClick={() => changeProduct('0', product.id)}>
         <img src={closeCart} alt="close button" />

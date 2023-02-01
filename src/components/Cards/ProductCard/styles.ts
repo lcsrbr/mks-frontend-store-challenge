@@ -5,7 +5,7 @@ padding: 0px 12px 0px 12px;
 display: flex;
 flex-direction: column;
 gap: 10px;
-// justify-content: space-between;
+justify-content: space-around;
 align-items: center;
 background: #ffffff;
 box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
@@ -18,7 +18,6 @@ img {
 }
 
 p {
-  font-family: Montserrat;
   font-size: 10px;
   font-weight: 300;
   line-height: 12px;
@@ -39,7 +38,6 @@ border: none;
 min-height: 32px;  
 background: #0F52BA;
 border-radius: 0px 0px 8px 8px;
-font-family: 'Montserrat';
 font-style: normal;
 font-weight: 600;
 font-size: 14px;
@@ -55,15 +53,17 @@ export const TitleAndPrice = styled.div`
 display: flex;
 justify-content: space-between;
 width: 100%;
-align-items: baseline;
+align-content: center;
+align-items: center;
 h3 {
-font-family: 'Montserrat';
 font-style: normal;
 font-weight: 400;
 font-size: 16px;
 line-height: 19px;
-// height: 38px;
+height: 38px;
 width: 124px;
+display: flex;
+align-items: center;
 }
 `
 
@@ -73,10 +73,9 @@ display: flex;
 align-items: center;
 justify-content: center;
 height: 26px;
-width: 64px;
+width: 67px;
 background: #373737;
 border-radius: 5px;
-padding: 4px 6px;
 
 p {
   font-weight: 999;

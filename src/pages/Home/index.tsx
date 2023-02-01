@@ -7,6 +7,7 @@ import ProductCard from '../../components/Cards/ProductCard';
 import API from '../../services/api';
 import IProducts from '../../interfaces/IProducts';
 import { RootState } from '../../redux/store';
+import Loading from '../../Loading';
 
 function Home() {
 
@@ -32,6 +33,9 @@ function Home() {
   return ( 
     <S.Main>
       <S.Container> 
+        {apiProducts.length < 1 && (
+          <Loading />
+        )}
         {apiProducts && apiProducts.map((product: IProducts, index: number) => {
           return (
             <ProductCard product={product} key={index} />

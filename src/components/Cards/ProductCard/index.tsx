@@ -33,7 +33,7 @@ function ProductCart({ product }: IPropProducts) {
         <h3>{`${product.brand} ${product.name}`}</h3>
         <S.Price>
           <p>
-            {`R$${Math.trunc(+product.price)}`}
+            {`R$${Math.trunc(+product.price).toLocaleString('pt-BR')}`}
           </p>
           </S.Price>
       </S.TitleAndPrice>
