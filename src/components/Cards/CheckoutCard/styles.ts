@@ -9,7 +9,6 @@ border-radius: 8px;
 background: #ffffff;
 box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.05);
 border-radius: 8px;
-font-family: 'Montserrat';
 align-items: center;
 justify-content: space-around;
 padding-right: 10px;
@@ -23,6 +22,16 @@ h3 {
   width: 113px;
   border-radius: nullpx;
   color: #2c2c2c;
+}
+
+p {
+  height: 17px;
+width: 62px;
+
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 17px;
 }
 
 img {
@@ -47,7 +56,6 @@ img {
 export const Qtd = styled.div`
 display: flex;
 flex-direction: column;
-gap: 5px;
 div {
   box-sizing: border-box;
   height: 25px;
