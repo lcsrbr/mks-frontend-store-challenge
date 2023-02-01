@@ -27,12 +27,12 @@ Tecnologias Utilizadas
 
   1. Clone o repositório
 
-  - Use o comando: `git clone git@github.com:lcsrbr/TrybeTunes.git`.
+  - Use o comando: `git@github.com:lcsrbr/mks-frontend-store-challenge.git`.
 
   2. Instale as dependências
 
   - `npm install`.
   
   # [Outros Projetos](https://portfolio-bay-omega-17.vercel.app/#projetos)
-<img src='https://portfolio-bay-omega-17.vercel.app/static/media/trybetunes.cf63ca0e7637c522fd5c.png'></img>
-<img src='https://portfolio-bay-omega-17.vercel.app/static/media/trybetunes.cf63ca0e7637c522fd5c.png'></img>
+<img src='https://raw.githubusercontent.com/lcsrbr/mks-frontend-store-challenge/main/src/images/home.png?token=GHSAT0AAAAAAB5R4TA3VDK2UEQTKEJWE4YQY63AMGA'></img>
+<img src='https://raw.githubusercontent.com/lcsrbr/mks-frontend-store-challenge/main/src/images/cart.png?token=GHSAT0AAAAAAB5R4TA3L5A2KMOTXNQQWYRIY63AMWA'></img>
